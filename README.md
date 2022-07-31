@@ -22,7 +22,7 @@ python -m venv venv
 pip install requirement.txt
 ```
 
-## Editor
+## Video Edit Methods
 ### Video interpolation by [IFRNet](https://github.com/ltkong218/IFRNet) (Super Slow Motion)
 Image interpolation by IFRNet makes the input video super-slow-motion.
 
