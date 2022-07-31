@@ -19,6 +19,7 @@ pip install requirement.txt
 ```powershell
 python -m venv venv
 ./venv/Scripts/activate
+pip install requirement.txt
 ```
 
 ## Method
