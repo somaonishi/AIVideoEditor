@@ -1,4 +1,4 @@
-# VideoEditor
+# AI Video Editor
 A repository for Deep AI Video Editing, with the latest SOTA models available for a variety of editing tasks.
 
 ## Implemented
