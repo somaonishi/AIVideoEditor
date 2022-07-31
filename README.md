@@ -1,5 +1,5 @@
 # VideoEditor
-A repository for AI Video Editing, with the latest SOTA models available for a variety of editing tasks.
+A repository for Deep AI Video Editing, with the latest SOTA models available for a variety of editing tasks.
 
 ## Implemented
 - Video interpolation by [IFRNet](https://github.com/ltkong218/IFRNet)
