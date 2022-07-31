@@ -70,12 +70,15 @@ def save_inter_images(args, input_dir: Path, num_frames: int):
     print(f'device: {device}')
 
     if args.model_size == 'N':
+        print('Select: Normal Model')
         model = IFRNet()
         model.load_state_dict(torch.load('./IFRNet/checkpoints/IFRNet/IFRNet_Vimeo90K.pth'))
     elif args.model_size == 'S':
+        print('Select: Small Model')
         model = IFRNet_S()
         model.load_state_dict(torch.load('./IFRNet/checkpoints/IFRNet_small/IFRNet_S_Vimeo90K.pth'))
     elif args.model_size == 'L':
+        print('Select: Large Model')
         model = IFRNet_L()
         model.load_state_dict(torch.load('./IFRNet/checkpoints/IFRNet_large/IFRNet_L_Vimeo90K.pth'))
     else:
@@ -137,6 +140,9 @@ def main(args):
     now = datetime.now()
     now_str = now.strftime('%Y-%m-%d_%H-%M-%S')
     print(f'Time: {now_str}')
+    print(f'Slow Motion: x{args.num_interp}')
+    print(f'Batch Size: {args.batch_size}')
+    print()
 
     out_dir = Path(args.output_dir)
     output_frames = out_dir / 'images' / now_str
@@ -156,10 +162,10 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('input_video_path', help='Path to input video.')
-    parser.add_argument('--output_dir', '-o', help='Path to output dir.', default='outputs/')
+    parser.add_argument('--output-dir', '-o', help='Path to output dir.', default='outputs/')
     parser.add_argument('--num-interp', '-i', help='Number of interpolated images (slow motion x).', default=2, type=int)
     parser.add_argument('--batch-size', '-b', help='batch size.', default=1, type=int)
     parser.add_argument('--model-size', '-m', choices=['N', 'S', 'L'], default='N', type=str)
-    parser.add_argument('--remain-img', '-n', help='[flag] remain images.', action='store_true')
+    parser.add_argument('--remain-img', '-r', help='[flag] remain images.', action='store_true')
     args = parser.parse_args()
     main(args)
