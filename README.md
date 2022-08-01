@@ -37,11 +37,11 @@ python video_super_slow.py INPUT_VIDEO_PATH
 * `--model-size`, `-m`: N is normal model, S is small model, L is large model. [default: N]
 * `--remain-img`, `-r`: [flag] remain images. [default: False]
 
-*example*
+Larger models are more accurate but require more computational resources.
+Larger batch sizes are faster, but require more computing resources.
+
+##### example
 4x slow motion. batch size is 4. Large model.
 ```bash
 python video_super_slow.py input.mov -i 4 -b 4 -m L
 ```
-
-Larger models are more accurate but require more computational resources.
-Larger batch sizes are faster, but require more computing resources.
