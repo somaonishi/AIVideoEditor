@@ -44,6 +44,8 @@ Larger batch sizes are faster, but require more computing resources.
 
 ##### example
 4x slow motion. batch size is 4. Large model.
+
+
 ```bash
 python video_super_slow.py input.mov -i 4 -b 4 -m L
 ```
