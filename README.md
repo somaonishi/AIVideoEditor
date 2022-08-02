@@ -25,6 +25,7 @@ pip install requirement.txt
 ## Video Edit Methods
 ### Video interpolation by [IFRNet](https://github.com/ltkong218/IFRNet) (Super Slow Motion)
 [ <a href="https://colab.research.google.com/gist/somaonishi/c181a8ff34f18dad8bd014ab7c6407c3/super_slow.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/gist/somaonishi/c181a8ff34f18dad8bd014ab7c6407c3/super_slow.ipynb)
+
 Image interpolation by IFRNet makes the input video super-slow-motion.
 
 #### Command
